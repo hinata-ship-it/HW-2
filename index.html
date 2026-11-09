@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ночь в музее</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="event-title">Ночь в музее</h1>
+    </header>
+
+    <main class="main-content">
+        <section class="event-info">
+            <p class="event-date" id="event-date">Загрузка даты...</p>
+            <p class="event-place" id="event-place">Загрузка места...</p>
+            <p class="event-description" id="event-description">Загрузка описания...</p>
+        </section>
+
+        <section class="program-section">
+            <button class="btn" id="show-program">Показать программу</button>
+            <div class="program-content" id="program" hidden>Программа загружается...</div>
+        </section>
+
+        <section class="services-section">
+            <h2>Дополнительные услуги</h2>
+            <form id="service-form" hidden>
+                <fieldset>
+                    <legend>Выберите услуги:</legend>
+            <label><input type="checkbox" id="guide" name="service"> Экскурсия с гидом</label><br>
+            <label><input type="checkbox" id="audio" name="service"> Аудиогид</label><br>
+            <label><input type="checkbox" id="catalog" name="service"> Каталог выставки</label><br>
+            <button type="submit" class="btn">Рассчитать стоимость</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <div class="messages">
+            <div id="choice-error" class="error-message" hidden>Выберите хотя бы одну услугу.</div>
+            <div id="data-error" class="error-message" hidden>Ошибка данных.</div>
+        </div>
+
+        <section class="results">
+            <div id="result" class="result-card" hidden></div>
+            <div id="report-json" class="json-output" hidden></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Музей космонавтики, 2026</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
